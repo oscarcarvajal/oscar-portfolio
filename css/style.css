@@ -1,0 +1,54 @@
+:root{
+    --fuentePrincipal: 'Gothic', sans-serif;
+    --fuenteSecundaria: 'Oswald', sans-serif;
+    --primario: #f1a94e;
+    --secundario: #44b3c2;
+    --claro: #ffffff;
+}
+html{
+box-sizing: border-box;
+}
+
+body{
+font-family: var(--fuentePrincipal);
+}
+
+.contenedor{
+max-width: 1100px;
+width: 90%;
+margin: 0 auto;
+}
+img{
+max-width: 100%;
+}
+h1{
+font-size: 2.8rem;
+}
+h2{
+font-size: 2.6rem;
+}
+h3{
+font-size: 2.4rem;
+}
+.hero{
+    background-image: url(../img/fondo.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.hero .contenedor{
+    display:grid;
+    align-content: center;
+    height: 100vh;
+}
+.hero .contenido{
+    text-align: center;
+    color: var(--claro);
+}
+.titulo{
+    margin: 0;
+}
+.subtitulo{
+    font-size: 1.6rem;
+}
