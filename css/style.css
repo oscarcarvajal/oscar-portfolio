@@ -30,6 +30,13 @@ font-size: 2.6rem;
 h3{
 font-size: 2.4rem;
 }
+p{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.2rem;
+    line-height: 2rem;
+
+}
+/*Hero*/
 .hero{
     background-image: url(../img/fondo.jpg);
     height: 100vh;
@@ -51,4 +58,35 @@ font-size: 2.4rem;
 }
 .subtitulo{
     font-size: 1.6rem;
+}
+
+/*Servicios */
+.servicios{
+    text-align: center;
+    margin-top: 3rem;
+}
+.servicios h2{
+    padding-bottom: .5rem;
+}
+.servicios h2::after{
+    height: .5rem;
+    width: 7rem;
+    background-color: var(--primario);
+    content: '';
+    display: block;
+    margin: 1rem auto 0 auto;
+}
+.servicios i {
+    font-size: 3rem;
+    color: var(--secundario);
+
+}
+
+@media (min-width: 768px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,
+        minmax(200px, 1fr));
+        grid-column-gap: 2rem;
+    }
 }
