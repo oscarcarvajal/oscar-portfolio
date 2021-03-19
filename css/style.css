@@ -39,16 +39,18 @@ p{
 }
 /*Hero*/
 .hero{
-    background-image: url(../img/fondo.jpg);
+    background-image: url(../img/hero.jpg);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+    
 
 }
 .hero .contenedor{
     display:grid;
     align-content: center;
     height: 100vh;
+    
 }
 .hero .contenido{
     text-align: center;
@@ -195,4 +197,23 @@ p{
         display: grid;
         grid-template-columns: repeat(2, 30%);
     }
+}
+
+/*about*/
+.about{
+    text-align: center;
+    margin-top: 2rem;
+
+}
+@media (min-width: 992px) {
+    .about{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+        text-align: left;
+    }
+}
+.contenido-nosotros{
+    display: grid;
+    align-content: center;
 }
