@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
-    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/tailwind.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@400;700&family=Ranchers&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Freelancer</title>
@@ -22,6 +22,7 @@
         </div>
     </div><!--.hero-->
 
+
     <nav class="nav-bg">
         <div class="navegacion-principal contenedor">
             <a href="index.html">Home</a>
@@ -30,8 +31,54 @@
         </div>
     </nav>
 
- 
+    <main class="contenedor">
+        <h3 class="title">Contac Us</h3>
 
+        <div class="contact-bg"></div>
+
+        <form id="enviar-mail" class="py-10 px-5 max-w-lg mx-auto">
+            <div class="mb-10">
+                <label for="firstName">Name:</label>
+                <input class="bg-gray-100 border shadow p-3 w-full"  id="firstName" type="text">
+            </div>
+            <div class="mb-10">
+                <label for="email">Email:</label>
+                <input class="bg-gray-100 border shadow p-3 w-full"  id="email" type="email">
+            </div>
+            <div class="mb-10"> 
+                <label for="message">Message:</label>
+                <textarea class="bg-gray-100 border shadow p-3 w-full" id="message"></textarea>
+            </div>
+
+            <div  id="spinner">
+                <div class="sk-chase">
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                </div>
+            </div>
+            
+            <div class="flex justify-between">
+                    <button 
+                        id="enviar" class="w-full bg-blue-600 px-2 py-5 text-white items-center cursor-not-allowed opacity-50 mr-5 uppercase font-bold items-center flex justify-center" 
+                        type="submit" 
+                    >Submit
+                        <i class="material-icons right text-white ml-3">send</i>
+                    </button>
+
+                    <button 
+                        id="resetBtn" 
+                        class="w-full bg-green-600 px-2 py-5 text-white items-center uppercase font-bold items-center flex justify-center" 
+                        type="resetBtn"
+                    >Reset Form
+                            <i class="material-icons right ml-3">delete</i>
+                    </button>
+            </div>
+        </form> 
+    </main>
     
 
     <footer class="footer">
