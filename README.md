@@ -1,6 +1,11 @@
-#Oscar-Portfolio
+# Oscar-Portfolio
 
-##Hello there. this is my portfolio 
--I'm currently learning JavaScripts and React.
--I'm looking to collaborate with other content creaters.
--For my portfolio I created using HTML, CSS, JavaScripts.
+**Version 1.0.0**
+
+## Hello there. this is my portfolio 
+
+- For my portfolio I created using HTML, CSS, JavaScripts.
+
+## Contributors
+
+- Oscar Carvajal
