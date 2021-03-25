@@ -1,6 +1,8 @@
 //variables
 const btnEnviar = document.querySelector('#enviar');
+const btnReset = document.querySelector('#resetBtn');
 const formulario = document.querySelector('#enviar-mail');
+ 
 
 const firstName = document.querySelector('#firstName');
 const email = document.querySelector('#email');
@@ -17,6 +19,9 @@ function eventListeners(){
     firstName.addEventListener('blur', validarFormulario);
     email.addEventListener('blur', validarFormulario);
     message.addEventListener('blur', validarFormulario);
+
+    //Reset Form
+    btnReset.addEventListener('click', resetearFormulario);
 
     //send email
 
@@ -105,8 +110,14 @@ function enviarEmail(e) {
         formulario.insertBefore(parrafo, spinner);
         setTimeout(() => {
             parrafo.remove();//Delete send email
+            resetearFormulario();
         }, 5000);
-    }, 3000);
-  
-    
+    }, 3000);    
 }
+function resetearFormulario(){
+    formulario.reset();
+
+    iniciarApp();
+
+}
+
