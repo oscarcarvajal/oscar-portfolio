@@ -17,10 +17,9 @@ body{
 font-family: var(--fuentePrincipal);
 }
 
-.contenedor{
-max-width: 120rem;
-width: 90%;
-margin: 0 auto;
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 img{
 max-width: 100%;
@@ -38,63 +37,99 @@ p{
     font-family: var(--fuentePrincipal);
     font-size: 1.2rem;
     line-height: 2rem;
-
 }
-/*Hero*/
-.hero{
-    background-image: url(../img/hero.jpg);
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-
-}
-.hero .contenedor{
-    display:grid;
-    align-content: center;
-    height: 100vh;
-    
-}
-.hero .contenido{
-    text-align: center;
-    color: var(--claro);
-}
-.titulo{
+/**utilidades**/
+.no-margin{
     margin: 0;
 }
-.subtitulo{
-    font-size: 1.6rem;
+a{
+    text-decoration: none;
+    color: var(--claro);
 }
-/* Navegacion-principal*/
-.nav-bg{
-    background-color: var(--oscuro);
+/*Header*/
+.hero{
+    background-image: url(../img/hero-3.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
-.navegacion-principal{
+.header{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+}
+.barra{
+    position: absolute;
+    background-color: #17202a;
+    width: 100%;
+    top: 1rem;
+    padding: 1rem 0;
+}
+.barra .contenedor{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    
 }
 @media (min-width: 768px) {
-    .navegacion-principal{
-       flex-direction: row;
-       justify-content: space-between;
+    .barra .contenedor{
+        flex-direction: row;
+        justify-content: space-between;
     }
 }
-.navegacion-principal a{
-    display: inline;
-    text-align: center;
+.logo,
+.navegacion{
     color: var(--claro);
-    text-decoration: none;
-    font-size: 1.6rem;
+
+}
+.logo-text{
+    font-weight: 400;
+    text-align: center;
+}
+.logo-bold{
     font-weight: 700;
-    padding: 1rem
-    
 }
-.navegacion-principal a:hover{
-    background-color: var(--secundario);
-    
+.navegacion ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
 }
+.navegacion ul li{
+    padding: 1rem 0;
+}
+@media (min-width: 768px) {
+    .navegacion{
+        flex: 0 0 25rem;
+    }
+    .navegacion ul{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navegacion ul li{
+        padding: 0;
+    }
+}
+.navegacion ul li a{
+    font-family: var(--fuentePrincipal);
+    color: white;
+    text-transform: uppercase;
+}
+
+
+.logo-img{
+    max-width: 20rem;
+}
+.header-contenido h1{
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    max-width: 25rem;
+}
+.header-contenido p{
+    color: var(--claro);
+}
+
 /*Servicios contenedor*/
 .servicios{
     text-align: center;
