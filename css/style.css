@@ -4,7 +4,7 @@
     --primario: #f1a94e;
     --secundario: #44b3c2;
     --claro: #ffffff;
-    --oscuro: #5b5b5b;
+    --oscuro:#143150;
     --mal:  #FF0000;
 }
 html{
@@ -49,7 +49,7 @@ a{
 /*Header*/
 
 .site-header {
-    background-color: #333333;
+    background-color: var(--oscuro);
     padding: 1rem 0 3rem 0;
 }
 
@@ -65,13 +65,13 @@ a{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     text-align: center;
 }
 
 @media (min-width: 768px) {
     .contenido-header {
         text-align: left;
+        justify-content: space-between;
     }
 }
 
@@ -206,6 +206,9 @@ a{
     }
 }
 /* Portafolio*/
+.portafolio{
+    margin-bottom: 5rem;
+}
 .portafolio h2{
     text-align: center;
 }
@@ -252,32 +255,37 @@ a{
 
 /*footer*/
 
-.footer{
-    background-image: url(../img/contacto.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.site-footer {
+    background-color:var(--oscuro);
+    margin: 0;
+}
+.contenedor-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .5rem 0;
+    text-align: center;
+    
+}
+.navegacion-footer h3{
     color: var(--claro);
-    padding: 2rem 0;
-    margin-top: 5rem;
-}
-.sociales{
-    display: grid; 
-    grid-template-columns: repeat(2, 50%); 
-}
-
-.sociales ul{
-    list-style-type: none;
 }
 @media (min-width: 768px) {
-    .footer .contenedor {
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
-    }
-    .sociales{
-        display: flex;  
-    }
-   
+    .contenedor-footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      
+    
+    } 
 }
+
+.copyright {
+    margin: 0;
+    color: #ffffff;
+}
+
 
 
 
@@ -285,6 +293,7 @@ a{
 .about{
     text-align: center;
     margin-top: 2rem;
+    margin-bottom: 5rem;
 
 }
 @media (min-width: 992px) {
@@ -301,7 +310,9 @@ a{
 }
 
 /*Contact*/
-
+.contact{
+    margin-bottom: 5rem;
+}
 section h1{
     text-align: center;
 }
@@ -348,4 +359,36 @@ textarea {
 }
 .boton:hover{
     background-color: #04ddfa;
+}
+
+/*podcast*/
+.blog{
+    margin-bottom: 5rem;
+}
+.blog-principal{
+    max-width: 60%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+.sidebar{
+    background-color: var(--primario);
+    padding: 2rem;
+}
+.sidebar h3{
+    color: var(--claro);
+}
+.sidebar ul li{
+    color: var(--claro);
+    line-height: 2;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+@media (min-width: 768px) {
+    .blog{
+        display: flex;
+        margin-bottom: 0;
+    }
+    .sidebar{
+        flex: 0 0 30%;
+    }
 }
