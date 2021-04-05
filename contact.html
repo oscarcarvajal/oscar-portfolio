@@ -38,7 +38,7 @@
     <main class="contenedor contact">
         <h2>Fill out the Form</h2>
 
-        <form class="formulario">
+        <form class="formulario" action="POST" data-netlify="true">
             <fieldset>
                 <legend>Personal Information</legend>
 
@@ -53,6 +53,8 @@
 
                 <label for="mensaje">Message</label>
                 <textarea id="mensaje"></textarea>
+
+                <div data-netlify-recaptcha="true"></div>
             </fieldset>
             <input type="submit" value="send" class="boton">
         </form>
